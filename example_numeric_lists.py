@@ -171,7 +171,7 @@ copy(): Return a shallow copy of the list.
 
 # append an item to the end of the list
 lst = [1, 2, 3]
-lst.append(4)
+print(lst.append(4))
 
 # extend the list with another list
 lst.extend([4, 5, 6])
@@ -262,7 +262,7 @@ doubled_scores = [x * 2 for x in new_scores]
 # Say "give me the square root of x (for each x in new_scores)"
 # and cast it to a list using square brackets
 sqrt_scores = [math.sqrt(x) for x in new_scores]
-
+print(sqrt_scores)
 # Map each element (radius) to its area
 # Say "give me pi r squared (for each r in radius_list)"
 # and cast it to a list using square brackets

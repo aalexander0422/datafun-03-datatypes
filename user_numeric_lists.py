@@ -71,16 +71,54 @@ if __name__ == "__main__":
     print(f'The correlation between list X and list Y is ', {xy_corr})
     slope, intercept = statistics.linear_regression(listx, listy)
     future_x = 15
-    future_y = round(slope * future_x + intercept)
-    print(f'The Y value at the future time 15 is', {future_y})
-    min1 = min(List1)
-    Max1 = max(List1)
-    Len1 = len(List1)
-    Sum1 = sum(List1)
-    set1 = set(List1)
-    average1 = Sum1 / Len1
-    sorted1 = sorted(List1)
-    sorted11 = sorted(List1, reverse=True)
+    future_y = slope * future_x + intercept
+    print(f'The future y value at x = 15 is ', {future_y})
+    min1 = int(min(List1))
+    Max1 = int(max(List1))
+    Len1 = int(len(List1))
+    Sum1 = int(sum(List1))
+    average1 = int(Sum1 / Len1)
+    sorted1 = tuple(sorted(List1))
+    sorted11 = tuple(sorted(List1, reverse=True))
+    print(f'The min, max, Len, Sum, Set, average, sorted and reverse sorted for list 1 is \n', {min1}, {Max1}, {Len1}, {Sum1}, {average1})
+    print(f'The sorted list 1 is ', {sorted1})
+    print(f'The reverse sorted list 1 is ', {sorted11})
+    first = [1,2,3]
+    group = [1,2,3,4,5]
+    app = first.append(4)
+    print(f'This is the list appending', first.append(2))
+    ex = first.extend([4,5,6])
+    print(f'This is the list ending')
+    i = 0
+    newvalue = 42
+    first.insert(i,newvalue)
+    item_to_remove = 5 
+    cool = first.remove(item_to_remove)
+    print(f'This is removing an item', {cool})
+    ace = acendingsort = first.sort()
+    print(f'This is acending sort', {ace})
+    ct_of_2 = first.count(2)
+    print(f"This is counting 2", {ct_of_2})
+    Decendingsort = first.sort(reverse=True)
+    print('This is Decending Sort', {Decendingsort})
+    second = first.copy()
+    print(f'This is using .copy', )
+    first = second.pop(0)
+    print(f'This is using .pop(0)', {first})
+    last = second.pop(-1)
+    print(f'This is using .pop(-1)', {last})
+    scores_less_than_4 = [x for x in group if x < 4]
+    print(f'This is only using x < 4')
+    cubed_root = map(lambda x: math.pow(x), group)
+    print('This is using cubed root', {cubed_root})
+    volume_list = [map(lambda x: x * x * x, group)]
+    print(f'This is using volume')
+    listfiltered = [filter(lambda x: x < 4, group)]
+    print(f'This is the list filtered', (listfiltered))
+    tripled_scores = [map(lambda x: x * 3, group)]
+    print(f'This is the list trippled', [tripled_scores])
+    quad_scores = [map(lambda x: x * 4, group)]
+    print(f'This is the list quadrupled', quad_scores)
 
 # Why? Why only print if this the module called?
 # Because when you write good functions, you may want to
